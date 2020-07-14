@@ -1,0 +1,123 @@
+hiking_homepage:
+  path:     /home
+  defaults: { _controller: HikingBundle:Default:index }
+
+hiking_comments:
+  path:     /addcomments
+  defaults: { _controller: HikingBundle:Comments:addComments }
+show:
+  path:     /show1
+  defaults: { _controller: HikingBundle:Comments:show }
+get_commentsbyid:
+  path:     /comments/{id}
+  defaults: { _controller: HikingBundle:Comments:getCommentsByid }
+updateC:
+  path:     /updatecomments/{id}
+  defaults: { _controller: HikingBundle:Comments:update }
+delete_comments:
+  path:     /deletec/{id}
+  defaults: { _controller: HikingBundle:Comments:delete }
+
+
+hiking_add_event:
+  path:     /addevent
+  defaults: { _controller: HikingBundle:Event:addEvent }
+show2:
+  path:     /show2
+  defaults: { _controller: HikingBundle:Event:show }
+getEventbyid:
+  path:     /event/{id}
+  defaults: { _controller: HikingBundle:Event:getEventByid }
+updateEvent:
+  path:     /updateevent/{id}
+  defaults: { _controller: HikingBundle:Event:update }
+deleteEvent:
+  path:     /deleteevent/{id}
+  defaults: { _controller: HikingBundle:Event:delete }
+
+
+hiking_participant:
+  path:     /addparticipant
+  defaults: { _controller: HikingBundle:Participant:addParticipant }
+show3:
+  path:     /show3
+  defaults: { _controller: HikingBundle:Participant:show }
+getEventbyid3:
+  path:     /participant/{id}
+  defaults: { _controller: HikingBundle:Participant:getParticipantByid }
+updateEvent3:
+  path:     /updateparticipant/{id}
+  defaults: { _controller: HikingBundle:Participant:update }
+deleteEvent3:
+  path:     /deleteparticipant/{id}
+  defaults: { _controller: HikingBundle:Participant:delete }
+
+
+hiking_participation:
+  path:     /addParticipation
+  defaults: { _controller: HikingBundle:Participation_Event:addParticipation }
+show4:
+  path:     /show4
+  defaults: { _controller: HikingBundle:Participation_Event:show }
+getParticipationbyid:
+  path:     /participation/{id}
+  defaults: { _controller: HikingBundle:Participation_Event:getParticipationByid }
+update_participation:
+  path:     /updateparticipation/{id}
+  defaults: { _controller: HikingBundle:Participation_Event:update }
+delete_participation:
+  path:     /deleteparticipation/{id}
+  defaults: { _controller: HikingBundle:Participation_Event:delete }
+
+
+hiking_place:
+  path:     /addplace
+  defaults: { _controller: HikingBundle:Place:addPlace }
+show5:
+  path:     /show5
+  defaults: { _controller: HikingBundle:Place:show }
+getPlacebyid:
+  path:     /place/{id}
+  defaults: { _controller: HikingBundle:Place:getPlaceByid }
+update_place:
+  path:     /updateplace/{id}
+  defaults: { _controller: HikingBundle:Place:update }
+delete_place:
+  path:     /deleteplace/{id}
+  defaults: { _controller: HikingBundle:Place:delete }
+
+
+hiking_publication:
+  path:     /addpublication
+  defaults: { _controller: HikingBundle:Publication:addPublication }
+show6:
+  path:     /show6
+  defaults: { _controller: HikingBundle:Publication:show }
+getPublicationbyid6:
+  path:     /publication/{id}
+  defaults: { _controller: HikingBundle:Publication:getPublicationByid }
+update_publication:
+  path:     /updatepublication/{id}
+  defaults: { _controller: HikingBundle:Publication:update }
+delete_publication:
+  path:     /deletepublication/{id}
+  defaults: { _controller: HikingBundle:Publication:delete }
+
+
+
+hiking_rating:
+  path:     /addrating
+  defaults: { _controller: HikingBundle:Rating:addrating }
+show7:
+  path:     /show7
+  defaults: { _controller: HikingBundle:Rating:show }
+getRatingbyid:
+  path:     /rating/{id}
+  defaults: { _controller: HikingBundle:Rating:getRatingByid }
+update_rating:
+  path:     /updaterating/{id}
+  defaults: { _controller: HikingBundle:Rating:update }
+delete_rating:
+  path:     /deleterating/{id}
+  defaults: { _controller: HikingBundle:Rating:delete }
+

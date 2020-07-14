@@ -1,0 +1,52 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+    encoders:
+        UserBundle\Entity\User:
+            algorithm: bcrypt
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        bd_provider:
+            entity:
+                class: UserBundle:User
+                property: email
+
+
+    firewalls:
+
+
+        wsse_secured:
+            pattern:   ^/api/
+            stateless: true
+            wsse:      { lifetime: 3 }
+
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            json_login:
+                check_path: /login
+
+
+            logout:
+                path: /logout
+                target: /logout
+
+
+
+
+    access_control:
+        - { path: ^/user, roles: ROLE_SUPER_ADMIN }
+
+            # activate different ways to authenticate
+
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+            #http_basic: ~
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+            #form_login: ~
+

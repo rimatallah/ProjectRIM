@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Post</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ post.id }}</td>
+            </tr>
+            <tr>
+                <th>Text</th>
+                <td>{{ post.text }}</td>
+            </tr>
+            <tr>
+                <th>Nbrlikes</th>
+                <td>{{ post.nbrLikes }}</td>
+            </tr>
+            <tr>
+                <th>Nbrcomments</th>
+                <td>{{ post.nbrComments }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ post.image }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ post.location }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('post_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

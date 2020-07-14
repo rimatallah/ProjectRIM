@@ -1,0 +1,3 @@
+msg_homepage:
+    path:     /xxx
+    defaults: { _controller: MsgBundle:Default:index }

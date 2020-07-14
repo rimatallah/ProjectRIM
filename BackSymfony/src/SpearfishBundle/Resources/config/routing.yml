@@ -1,0 +1,23 @@
+spearfish_homepage:
+    path:     /xx
+    defaults: { _controller: SpearfishBundle:Default:index }
+
+spearfish_add_fish:
+    path:     /add
+    defaults: { _controller: SpearfishBundle:Fish:addFish }
+
+spearfish_get_fish_by_id:
+    path:     /getf/{idFish}
+    defaults: { _controller: SpearfishBundle:Fish:getFishById }
+
+spearfish_up_fish_by_id:
+    path:     /upf/{idFish}
+    defaults: { _controller: SpearfishBundle:Fish:updateFishById }
+
+spearfish_rm_fish_by_id:
+    path:     /rmf/{idFish}
+    defaults: { _controller: SpearfishBundle:Fish:updateFishById }
+
+spearfish_upload_img:
+    path:     /upfile
+    defaults: { _controller: SpearfishBundle:File:upload }

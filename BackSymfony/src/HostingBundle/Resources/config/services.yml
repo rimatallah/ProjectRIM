@@ -1,0 +1,6 @@
+services:
+#    hosting.example:
+#        class: HostingBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+  jms_serializer.naming_strategy:
+    alias: jms_serializer.identical_property_naming_strategy

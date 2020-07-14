@@ -1,0 +1,35 @@
+msg:
+    resource: "@MsgBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hiking:
+    resource: "@HikingBundle/Resources/config/routing.yml"
+    prefix:   /
+
+activite:
+    resource: "@ActiviteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+artisanat:
+    resource: "@ArtisanatBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+spearfish:
+    resource: "@SpearfishBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hosting:
+    resource: "@HostingBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

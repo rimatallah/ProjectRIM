@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ownerships list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ownership in ownerships %}
+            <tr>
+                <td><a href="{{ path('ownership_show', { 'id': ownership.id }) }}">{{ ownership.id }}</a></td>
+                <td>{{ ownership.type }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('ownership_show', { 'id': ownership.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

@@ -1,0 +1,30 @@
+
+    /**
+{% block phpdoc_method_header %}
+     * Displays a form to edit an existing {{ entity_singularized }} entity.
+{% endblock phpdoc_method_header %}
+     *
+{% block phpdoc_method_annotations %}
+{% if 'annotation' == format %}
+     * @Route("/{{ '{' ~ identifier ~ '}' }}/edit", name="{{ route_name_prefix }}_edit")
+     * @Method({"GET", "POST"})
+{% endif %}
+{% endblock phpdoc_method_annotations %}
+     */
+{% block method_definition %}
+    public function editAction(Request $request, {{ entity_class }} ${{ entity_singularized }})
+{% endblock method_definition %}
+    {
+{% block method_body %}
+    $data = $request->getContent();
+    ${{ entity_singularized }}Data = $this->get('jms_serializer')->deserialize($data, '{{ bundle }}\Entity\{{ entity_class }}', 'json');
+
+    $em = $this->getDoctrine()->getManager();
+    $em->persist(${{ entity_singularized }});
+    $em->flush();
+{% endblock method_body %}
+
+{% block method_return %}
+        return new Response($this->get('jms_serializer')->serialize(${{ entity_singularized }}, 'json'));
+{% endblock method_return %}
+    }
